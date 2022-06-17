@@ -40,7 +40,7 @@ RUN apt update && \
     rm -rf ./aws && \
     curl -sfL https://direnv.net/install.sh | bash && \
     rm -rf install.sh && \
-    curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh \ &&
+    curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh && \
     printf 'source ~/.bash-powerline.sh\n' >> /root/.bashrc && \
     printf 'source ~/.aliases\n' >> /root/.bashrc && \
     printf 'eval "$(direnv hook bash)"\n' >> /root/.bashrc && \
