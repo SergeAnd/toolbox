@@ -40,6 +40,8 @@ RUN apt update && \
     rm -rf ./aws && \
     curl -sfL https://direnv.net/install.sh | bash && \
     rm -rf install.sh && \
+    curl https://raw.githubusercontent.com/riobard/bash-powerline/master/bash-powerline.sh > ~/.bash-powerline.sh \ &&
+    printf 'source ~/.bash-powerline.sh\n' >> /root/.bashrc && \
     printf 'source ~/.aliases\n' >> /root/.bashrc && \
     printf 'eval "$(direnv hook bash)"\n' >> /root/.bashrc && \
     curl -o helm.tar.gz https://get.helm.sh/helm-v${helm_version}-linux-amd64.tar.gz && \
@@ -53,3 +55,4 @@ RUN apt update && \
     apt autoremove -y && \
     apt autoclean -y && \
     rm -rf /var/lib/{apt,dpkg,cache,log}/
+
